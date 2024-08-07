@@ -26,12 +26,17 @@ Output:
 [1, 1, 2, 3, 4, 5, 6]
 
 each iteration of i:
-[1, 2, 3, 4, 1, 5, 6]
-[1, 2, 3, 1, 4, 5, 6]
-[1, 2, 1, 3, 4, 5, 6]
-[1, 1, 2, 3, 4, 5, 6]
-[1, 1, 2, 3, 4, 5, 6]
-[1, 1, 2, 3, 4, 5, 6]
+[1, 2, 3, 4, 1, 5,|6]
+[1, 2, 3, 1, 4,|5, 6]
+[1, 2, 1, 3,|4, 5, 6]
+[1, 1, 2,|3, 4, 5, 6]
+[1, 1,|2, 3, 4, 5, 6]
+[1,|1, 2, 3, 4, 5, 6]
+
+In each iteration of the bubble sort algorithm, 
+the largest unsorted element is placed at its 
+correct position at the end of the list, and 
+it is not touched in subsequent iterations.
 
 Time Complexity: O(n^2)
 Space Complexity: O(1)
