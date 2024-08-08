@@ -24,22 +24,23 @@ print(ip)
 Output:
 [1, 1, 2, 3, 4, 5, 6]
 
-each iteration of i:
-|[4]|[1]1, 2, 3, 6, 1, 5
-[1]|[4]|1, 2, 3, 6, 1, 5
-|[2]|[3]1, 4, 6, 1, 5
-[2]|[3]|1, 4, 6, 1, 5
-1, 2, 3, 4,|[1]|[6]5
-1, 2, 3, 4, [1]|[5]|6
-1, 1, 2, 3, 4|, 5, 6|
+Each iteration of partitioning:
+[4, 1, 2, 3, 6, 1, 5] -> Pivot: 5, Partitioned: [4, 1, 2, 3, 1, |5|, 6]
+[4, 1, 2, 3, 1, |5|, 6] -> Pivot: 1, Partitioned: [|1|, 1, 2, 3, 4, 5, 6]
+[1, 1, 2, 3, 4, |5|, 6] -> Pivot: 4, Partitioned: [1, 1, 2, 3, |4|, 5, 6]
+[1, 1, 2, 3, |4|, 5, 6] -> Pivot: 3, Partitioned: [1, 1, 2, |3|, 4, 5, 6]
+[1, 1, 2, |3|, 4, 5, 6] -> Pivot: 2, Partitioned: [1, 1, |2|, 3, 4, 5, 6]
+[1, 1, |2|, 3, 4, 5, 6] -> Pivot: 1, Partitioned: [1, |1|, 2, 3, 4, 5, 6]
+[1, |1|, 2, 3, 4, 5, 6]
 
-In each iteration of the merge sort algorithm, 
-the array is recursively divided into smaller 
-subarrays until each subarray contains a single 
-element, and then these subarrays are merged back
-together in a sorted order, gradually building 
-up the fully sorted array.
+In each iteration of the quick sort algorithm, 
+a pivot element is chosen, and the array is 
+partitioned such that elements smaller than the 
+pivot are placed to its left, and elements 
+greater are placed to its right. The process 
+is recursively applied to the subarrays, 
+gradually sorting the entire array.
 
-Time Complexity: O(nlogn)
-Space Complexity: O(n)
+Time Complexity: O(nlogn) , worst case O(n^2)
+Space Complexity: O(logn) (due to the recursive stack)
 """
