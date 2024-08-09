@@ -1,12 +1,12 @@
+#pivot as last element
+
 def quickSort(arr,low,high):
-        # code here
         if low<high:
             s=partition(arr,low,high)
             quickSort(arr,low,s-1)
             quickSort(arr,s+1,high)
     
 def partition(arr,low,high):
-        # code here
         pivot=arr[high]
         i=low-1
         for j in range(low,high+1):
