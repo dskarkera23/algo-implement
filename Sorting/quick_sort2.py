@@ -31,13 +31,12 @@ Output:
 [1, 1, 2, 3, 4, 5, 6]
 
 Each iteration of partitioning:
-[4, 1, 2, 3, 6, 1, 5] -> Pivot: 4, Partitioned: [1, 1, 2, 3, 4, 6, 5]
-[1, 1, 2, 3, 4, 6, 5] -> Pivot: 1, Partitioned: [1, 1, 2, 3, 4, 6, 5]
-[1, 1, 2, 3, 4, 6, 5] -> Pivot: 2, Partitioned: [1, 1, 2, 3, 4, 6, 5]
-[1, 1, 2, 3, 4, 6, 5] -> Pivot: 3, Partitioned: [1, 1, 2, 3, 4, 6, 5]
-[1, 1, 2, 3, 4, 6, 5] -> Pivot: 4, Partitioned: [1, 1, 2, 3, 4, 6, 5]
-[1, 1, 2, 3, 4, 5, 6] -> Pivot: 5, Partitioned: [1, 1, 2, 3, 4, 5, 6]
-[1, 1, 2, 3, 4, 5, 6] -> Pivot: 6, Partitioned: [1, 1, 2, 3, 4, 5, 6]
+[4, 1, 2, 3, 6, 1, 5] -> Pivot: 4, Partitioned: [1, 1, 2, 3, |4|, 6, 5]
+[1, 1, 2, 3, 4, 6, 5] -> Pivot: 1, Partitioned: [1, |1|, 2, 3, 4, 6, 5]
+[1, 1, 2, 3, 4, 6, 5] -> Pivot: 2, Partitioned: [1, 1, |2|, 3, 4, 6, 5]
+[1, 1, 2, 3, 4, 6, 5] -> Pivot: 3, Partitioned: [1, 1, 2, |3|, 4, 6, 5]
+[1, 1, 2, 3, 4, 5, 6] -> Pivot: 5, Partitioned: [1, 1, 2, 3, 4, |5|, 6]
+[1, 1, 2, 3, 4, 5, 6] -> Pivot: 6, Partitioned: [1, 1, 2, 3, 4, 5, |6|]
 
 In each iteration of the quick sort algorithm, 
 a pivot element (the first element of the current segment) is used to partition the array. 
